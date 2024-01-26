@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    background-image: linear-gradient(to left, purple,black);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.machine{
+    display: flex;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+.sides{
+    padding: 30px;
+}
+li.item{
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    width: 100%;
+    gap: 50px;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    justify-content: space-between;
+    background-image: linear-gradient(to right,rgb(168, 84, 168),#323232);
+    transition: background-image 1.3s;
+}
+li.item:not(:last-child){
+    margin-bottom: 5px;
+}
+li.item:hover{
+    background-image: linear-gradient(to left,rgb(168, 84, 168),#323232);
+    animation: beats 1s linear 0s infinite;
+}
+@keyframes beats {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+button.clear_btn{
+    position: absolute;
+    top: 25%;
+    left: 26%;
+    color: red;
+    padding: 10px 15px;
+    background-color: silver;
+    border: none;
+    width: fit-content;
+    margin: 0 auto;
+    transform: scale(0.6);
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px red;
+    cursor: no-drop;
+}
+button.Btn{
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 3px 3px silver;
+    background-color: #323232;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 20px;
+    width: 100%;
+}
+input{
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px black;
+    width: 100%;
+}
+input#total {
+    width: 0;
+    transition: all 1s;
+}
+input#total:valid {
+    width: 100%;
+}
+div.total {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.total label{
+    color: black;
+}

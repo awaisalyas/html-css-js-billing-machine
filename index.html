@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing JS</title>
+    <link rel="stylesheet" href="style.css">
+    <!--  -->
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="main">
+            <div class="machine">
+                <div class="left sides">
+                    <ul class="products">
+                        <li class="item" onclick="products(1.2)"><p>Mouse</p><p class="price">$1.2</p></li>
+                        <li class="item" onclick="products(3.2)"><p>KeyBoard</p><p class="price">$3.2</p></li>
+                        <li class="item" onclick="products(114.99)"><p>Monitor</p><p class="price">$114.99</p></li>
+                        <li class="item" onclick="products(320)"><p>CPU</p><p class="price">$320</p></li>
+                        <li class="item" onclick="products(120)"><p>Modem</p><p class="price">$120</p></li>
+                        <li class="item" onclick="products(309)"><p>i9 Processor</p><p class="price">$309</p></li>
+                        <li class="item" onclick="products(650)"><p>Laptop</p><p class="price">$650</p></li>
+                    </ul>
+                </div>
+                <div class="right sides">
+                    <input type="text" value="" class="recipt" id="recipt">
+                    <button class="Btn" onclick="result()">MAKE TOTAl</button>
+                    <div class="total">
+                        <label for="total">TOTAL</label>
+                        <input type="text" value="" class="total" id="total" required="">
+                    </div>
+                    <button class="clear_btn" onclick="clearScreen()">Clear Screen</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
